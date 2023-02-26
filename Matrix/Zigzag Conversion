@@ -1,0 +1,23 @@
+class Solution {
+public:
+    string convert(string s, int numRows) {
+        string ans;
+        if( s.empty() || numRows<=0  ) return " ";
+        if(numRows==1) return s;
+        int step=2*numRows-2; //pattern h ratt lo for first and last coloumn
+        //int k=0;
+        for(int i=0;i<numRows;i++){ // rows k liye loop
+             for(int j=i;j<s.size();j+=step){ // coloumn vali
+                ans+=s[j];
+                 if(i!=0 && i!=numRows-1 && (j+step-2*i)<s.size()) //j=j+step-2*i is the pattern for middle coloumn 
+                  ans+=s[j+step-2*i];
+                  //else
+                   //ans+=s[j];
+                 // k++;
+             }
+        }
+        return ans;
+
+        
+    }
+};
