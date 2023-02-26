@@ -1,0 +1,23 @@
+class Solution {
+public:
+    int pairSum(ListNode* head) {
+        ListNode *temp=head;
+        int ts=0;
+        ListNode *ptr=head;
+        int length=0;
+        while(temp!=NULL){
+          length++;
+            temp=temp->next;
+        }
+     vector <int> v;
+        while(ptr!=NULL){
+            v.push_back(ptr->val);
+            ptr=ptr->next;
+        }
+        for(int i=0;i<length/2;i++){
+             ts=max(ts,v[i]+v[length-1-i]);
+            
+        }
+        return ts;
+    }
+};
