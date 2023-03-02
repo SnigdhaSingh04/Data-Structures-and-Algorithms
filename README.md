@@ -1,1 +1,1 @@
-This repository consists of my solved questions on Data Structure and Algorithm from platforms like Leetcode and GFG.
+This repository consists of my solved questions on Data Structure and Algorithm from platforms like Leetcode and Geeks For Geeks.
